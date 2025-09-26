@@ -37,7 +37,7 @@ Veri seti, MRI beyin görüntülerinden oluşmakta ve **4 farklı sınıf** içe
 - **Toplam:** **1311**
 
 **Kaynak:**  
-[Kaggle Brain Tumor MRI Dataset](https://www.kaggle.com/datasets)
+[Kaggle Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
 ---
 
