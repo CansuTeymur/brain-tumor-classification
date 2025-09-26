@@ -43,30 +43,30 @@ Veri seti, MRI beyin görüntülerinden oluşmakta ve **4 farklı sınıf** içe
 
 Bu projede beyin tümörü sınıflandırması için aşağıdaki yöntemler kullanılmıştır:
 
-1. Temel CNN Modeli
+**1. Temel CNN Modeli**
 Giriş verisi: 150×150×3 boyutlu görüntüler.
 Üç adet Conv2D + MaxPooling2D bloğu (filtre sayıları: 32 → 64 → 128, kernel: 3×3).
 Flatten → Dense (128, ReLU) → Dropout (0.5) → Dense (4, Softmax) yapısı ile dört sınıf tahmini.
 
-2. Kayıp Fonksiyonu ve Optimizasyon
-Kayıp fonksiyonu: categorical_crossentropy
-Optimizasyon: Adam
-ReduceLROnPlateau ile öğrenme oranı dinamik olarak azaltılmıştır.
-EarlyStopping ile en iyi ağırlıklar korunmuştur.
+**2. Kayıp Fonksiyonu ve Optimizasyon**
+- Kayıp fonksiyonu: categorical_crossentropy
+- Optimizasyon: Adam
+- ReduceLROnPlateau ile öğrenme oranı dinamik olarak azaltılmıştır.
+- EarlyStopping ile en iyi ağırlıklar korunmuştur.
 
-3. Sınıf Ağırlıkları (Class Weights)
-compute_class_weight ile sınıf dengesizliği giderilmiştir.
-Az örneğe sahip sınıflara daha fazla ağırlık verilmiştir.
+**3. Sınıf Ağırlıkları (Class Weights)**
+- compute_class_weight ile sınıf dengesizliği giderilmiştir.
+- Az örneğe sahip sınıflara daha fazla ağırlık verilmiştir.
 
-4. Transfer Learning (VGG16)
-VGG16 önceden eğitilmiş model kullanılmıştır (include_top=False).
-Üzerine GlobalAveragePooling, Dense ve Dropout katmanları eklenerek dört sınıf tahmini yapılmıştır.
-Daha iyi genelleme için sınırlı veriyle yüksek performans sağlanmıştır.
+**4. Transfer Learning (VGG16)**
+- VGG16 önceden eğitilmiş model kullanılmıştır (include_top=False).
+- Üzerine GlobalAveragePooling, Dense ve Dropout katmanları eklenerek dört sınıf tahmini yapılmıştır.
+- Daha iyi genelleme için sınırlı veriyle yüksek performans sağlanmıştır.
 
-5. Veri Artırımı (Data Augmentation)
-ImageDataGenerator ile dönüşümler uygulanmıştır:
-Döndürme, kaydırma, zoom, yatay çevirme.
-Overfitting’i azaltıp modelin genelleme yeteneğini artırmıştır.
+**5. Veri Artırımı (Data Augmentation)**
+- ImageDataGenerator ile dönüşümler uygulanmıştır:
+- Döndürme, kaydırma, zoom, yatay çevirme.
+- Overfitting’i azaltıp modelin genelleme yeteneğini artırmıştır.
 
 ---
 
@@ -98,11 +98,11 @@ GitHub reposu şu şekilde düzenlenmiştir:
 
 brain-tumor-classification/
 │
-├── brain_tumor_classification.ipynb
-└── README.md (opsiyonel)
+├── brain_tumor_classification.ipynb     # Projenin ana notebook dosyası
+└── README.md                            # Proje açıklamaları ve kullanım bilgileri
 
 
-## **7. Sonuç**
+## **7. Sonuç**   
 
 Bu proje, MRI görüntülerinden beyin tümörlerini sınıflandırmada derin öğrenme modellerinin ne kadar güçlü olduğunu göstermektedir.
 Transfer Learning sayesinde doğruluk oranı artırılmış ve daha genel bir model elde edilmiştir.
