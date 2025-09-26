@@ -68,6 +68,7 @@ Bu projede beyin tümörü sınıflandırması için aşağıdaki yöntemler kul
 
 **5. Veri Artırımı (Data Augmentation)**
 - ImageDataGenerator ile dönüşümler uygulanmıştır:
+
   - Döndürme, kaydırma, zoom, yatay çevirme.
   - Overfitting’i azaltıp modelin genelleme yeteneğini artırmıştır.
 
@@ -100,11 +101,11 @@ Projeye ait Kaggle notebook’unu aşağıdaki bağlantıdan inceleyebilirsiniz:
 
 GitHub reposu şu şekilde düzenlenmiştir:
 
-"""brain-tumor-classification/
+```brain-tumor-classification/
 │
 ├── brain_tumor_classification.ipynb     # Projenin ana notebook dosyası
 └── README.md                            # Proje açıklamaları ve kullanım bilgileri
-"""
+```
 
 ## **7. Sonuç**   
 
