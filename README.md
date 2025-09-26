@@ -11,11 +11,13 @@ Model, derin öğrenme teknikleri kullanılarak dört farklı sınıfı ayırt e
 ---
 
 ## **1. Projenin Amacı**
+
 Bu projenin temel amacı, MRI beyin görüntülerinden **otomatik tümör tespiti ve sınıflandırma** yapmaktır.  
 
 ---
 
 ## **2. Veri Seti Hakkında**
+
 Projede kullanılan veri seti Kaggle üzerinden alınmıştır.  
 Veri seti, MRI beyin görüntülerinden oluşmakta ve **4 farklı sınıf** içermektedir.
 
@@ -44,9 +46,9 @@ Veri seti, MRI beyin görüntülerinden oluşmakta ve **4 farklı sınıf** içe
 Bu projede beyin tümörü sınıflandırması için aşağıdaki yöntemler kullanılmıştır:
 
 **1. Temel CNN Modeli**
-Giriş verisi: 150×150×3 boyutlu görüntüler.
-Üç adet Conv2D + MaxPooling2D bloğu (filtre sayıları: 32 → 64 → 128, kernel: 3×3).
-Flatten → Dense (128, ReLU) → Dropout (0.5) → Dense (4, Softmax) yapısı ile dört sınıf tahmini.
+- Giriş verisi: 150×150×3 boyutlu görüntüler.
+- Üç adet Conv2D + MaxPooling2D bloğu (filtre sayıları: 32 → 64 → 128, kernel: 3×3).
+- Flatten → Dense (128, ReLU) → Dropout (0.5) → Dense (4, Softmax) yapısı ile dört sınıf tahmini.
 
 **2. Kayıp Fonksiyonu ve Optimizasyon**
 - Kayıp fonksiyonu: categorical_crossentropy
@@ -94,6 +96,7 @@ Projeye ait Kaggle notebook’unu aşağıdaki bağlantıdan inceleyebilirsiniz:
 ---
 
 ## **6. Dosya Yapısı**
+
 GitHub reposu şu şekilde düzenlenmiştir:
 
 brain-tumor-classification/
