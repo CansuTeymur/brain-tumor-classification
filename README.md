@@ -80,7 +80,7 @@ Modelin performans karşılaştırması:
 
 | Metrik            | CNN Model | Transfer Learning |
 | ----------------- | --------- | ----------------- |
-| **Test Accuracy** | 0.7391    | **0.8337**        |
+| **Test Accuracy** | **0.7391**    | **0.8337**        |
 
 Genel Accuracy (CNN): %74
 
