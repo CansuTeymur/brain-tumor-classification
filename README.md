@@ -47,8 +47,9 @@ Bu projede beyin tümörü sınıflandırması için aşağıdaki yöntemler kul
 
 **1. Temel CNN Modeli**
 - Giriş verisi: 150×150×3 boyutlu görüntüler.
-- Üç adet Conv2D + MaxPooling2D bloğu (filtre sayıları: 32 → 64 → 128, kernel: 3×3).
-- Flatten → Dense (128, ReLU) → Dropout (0.5) → Dense (4, Softmax) yapısı ile dört sınıf tahmini.
+- 3 adet Conv2D + MaxPooling2D bloğu (Filtre sayısı: 32 → 64 → 128, kernel: 3x3)  
+- Flatten + Dense (128 nöron, ReLU) + Dropout (0.5)  
+- Çıkış katmanı: Dense(4, softmax) 
 
 **2. Kayıp Fonksiyonu ve Optimizasyon**
 - Kayıp fonksiyonu: categorical_crossentropy
@@ -61,14 +62,14 @@ Bu projede beyin tümörü sınıflandırması için aşağıdaki yöntemler kul
 - Az örneğe sahip sınıflara daha fazla ağırlık verilmiştir.
 
 **4. Transfer Learning (VGG16)**
-- VGG16 önceden eğitilmiş model kullanılmıştır (include_top=False).
+- Include_top=False ile önceden eğitilmiş VGG16 temel alınmıştır.
 - Üzerine GlobalAveragePooling, Dense ve Dropout katmanları eklenerek dört sınıf tahmini yapılmıştır.
 - Daha iyi genelleme için sınırlı veriyle yüksek performans sağlanmıştır.
 
 **5. Veri Artırımı (Data Augmentation)**
 - ImageDataGenerator ile dönüşümler uygulanmıştır:
-- Döndürme, kaydırma, zoom, yatay çevirme.
-- Overfitting’i azaltıp modelin genelleme yeteneğini artırmıştır.
+  - Döndürme, kaydırma, zoom, yatay çevirme.
+  - Overfitting’i azaltıp modelin genelleme yeteneğini artırmıştır.
 
 ---
 
@@ -99,11 +100,11 @@ Projeye ait Kaggle notebook’unu aşağıdaki bağlantıdan inceleyebilirsiniz:
 
 GitHub reposu şu şekilde düzenlenmiştir:
 
-brain-tumor-classification/
+"""brain-tumor-classification/
 │
 ├── brain_tumor_classification.ipynb     # Projenin ana notebook dosyası
 └── README.md                            # Proje açıklamaları ve kullanım bilgileri
-
+"""
 
 ## **7. Sonuç**   
 
