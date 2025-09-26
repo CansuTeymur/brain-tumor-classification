@@ -80,7 +80,7 @@ Modelin performans karşılaştırması:
 
 | Metrik            | CNN Model | Transfer Learning |
 | ----------------- | --------- | ----------------- |
-| **Test Accuracy** | **0.7391**    | **0.8337**        |
+| **Test Accuracy** | **0.7391**| **0.8337**        |
 
 Genel Accuracy (CNN): %74
 
@@ -110,4 +110,4 @@ GitHub reposu şu şekilde düzenlenmiştir:
 ## **7. Sonuç**   
 
 Bu proje, MRI görüntülerinden beyin tümörlerini sınıflandırmada derin öğrenme modellerinin ne kadar güçlü olduğunu göstermektedir.
-Transfer Learning sayesinde doğruluk oranı artırılmış ve daha genel bir model elde edilmiştir.
+Transfer Learning sayesinde doğruluk oranı artırılmıştır ve daha genel bir model elde edilmiştir.
